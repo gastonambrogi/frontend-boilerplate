@@ -23,7 +23,7 @@ def albums():
     fname = "data/albums/index.json"
     if not os.path.exists(fname):
         abort(404)
-    with open(fname, "rb") as fd:
+    with open(fname) as fd:
         return json.load(fd)
 
 
@@ -32,7 +32,7 @@ def album(album_id):
     fname = "data/albums/{}.json".format(album_id)
     if not os.path.exists(fname):
         abort(404)
-    with open(fname, "rb") as fd:
+    with open(fname) as fd:
         return json.load(fd)
 
 
