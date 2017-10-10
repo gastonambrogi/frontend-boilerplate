@@ -1,21 +1,22 @@
 import json
 import os
 
-from bottle import Bottle, abort, run, view, static_file
+from bottle import abort, Bottle, run, static_file
 
+
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 app = Bottle()
 
 
 @app.get("/")
-@view("index.html")
 def index():
-    return {}
+    return static_file("index.html", BASE_DIR)
 
 
 @app.get("/assets/<fname:path>")
 def assets(fname):
-    return static_file(fname, root="assets")
+    return static_file(fname, os.path.join(BASE_DIR, "assets"))
 
 
 @app.get("/api/v1/albums/")
