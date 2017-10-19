@@ -1,0 +1,15 @@
+{
+  "name": "devsar-frontend-boilerplate",
+  "description": "A starter project for devsar frontend-boilerplate app",
+  "version": "0.0.0",
+  "repository": "https://github.com/gastonambrogi/frontend-boilerplate",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "components-font-awesome": "^4.7.0",
+    "bootstrap":"^3.3.7",
+    "jquery":"1.9.1"
+  }
+}

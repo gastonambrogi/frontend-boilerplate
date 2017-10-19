@@ -1,0 +1,14 @@
+{
+  "name": "devsar-frontend-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for devsar frontend-boilerplate app",
+  "repository": "https://github.com/gastonambrogi/frontend-boilerplate",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.7"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}

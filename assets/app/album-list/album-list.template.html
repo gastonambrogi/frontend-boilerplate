@@ -1,0 +1,36 @@
+<div class="filter">
+  <form>
+    <div class="form-group">
+      <input ng-model="$ctrl.filterBy" type="text" placeholder="Search by Name or Artist" class="form-control"/>
+    </div>
+  </form>
+</div>
+
+<div class="row album" ng-repeat="album in $ctrl.albums | filter:$ctrl.filterBy">
+  <div class="col-md-2">
+    <img  class="img-responsive img-thumbnail" ng-src="{{ album.thumbnail }}" alt="{{album.name}}" />
+  </div>
+  <div class="col-md-10">
+    <a class="album-name" href="#!/albums/{{album.id}}">
+        {{ album.name }}
+    </a>
+    <div class="album-artist">
+        <i>{{album.artist}}</i>
+    </div>
+
+    <div class="album-popularity">
+      <span ng-repeat="popularity in $ctrl.popularityRange(album.popilarity) track by $index">
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </span>
+    </div>
+
+    <div class="album-genres">
+      <span> {{$ctrl.joinGenres(album.genres)}}</span>
+    </div>
+    |
+    <div class="album-release-date">
+      <span>Release Date: </span>
+      <span class"release-date">{{ album.release_date | date: 'yyyy' }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+album-list .album {
+	border-bottom: 1px solid grey;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+album-list .album-name {
+	font-size: 3em;
+	display: block;
+}
+
+album-list .album-artist {
+	display: block;
+}
+
+album-list .album-popularity {
+	color: orange;
+}
+
+album-list .album-genres, .album-release-date {
+	display: inline;
+}

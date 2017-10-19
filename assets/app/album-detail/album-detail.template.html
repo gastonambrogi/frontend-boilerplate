@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-md-12">
+		<a class="btn btn-link" href="#!/albums"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
+	</div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-10">
+  			<h1 class="album-name"> {{ $ctrl.album.name}} </h1>
+  		</div>
+  		<div class="col-md-2">
+  			<img class="img-responsive img-thumbnail" ng-src="{{ $ctrl.album.thumbnail }}" alt="{{album.name}}" />
+  			<h4 class="album-artist">{{ $ctrl.album.artist.name }}</h4>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h1>Album Tracks</h1>
+	</div>
+</div>
+
+<div class="row" ng-repeat="track in $ctrl.album.tracks">
+	<div class="col-md-1">
+		<span>Track #{{track.number}}</span>
+	</div>
+	<div class="col-md-6">
+		<span>{{ track.name }}</span>
+	</div>
+	<div class="col-md-1">
+		<span>{{ track.duration}}</span>
+	</div>
+	<div class="col-md-4">
+		<audio controls preload="auto">
+ 			<source ng-src="{{ track.preview }}" type="audio/mp4" />
+ 			<p>Su navegador no soporta audio en HTML5.</p>
+ 		</audio>
+	</div>
+</div>

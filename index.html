@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app-devsar">
     <head>
         <meta charset="utf-8">
-        <title>Welcome</title>
+        <title>Album Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/assets/bower_components/components-font-awesome/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     </head>
     <body>
-        <h1>Welcome</h1>
+      <div class="container">
+        <h1>Album Site</h1>
+        <div class="row">
+          <div class="col-md-12">
+            <div ng-view></div>
+          </div>
+        </div>
+      </div>
+
+      <script src="/assets/bower_components/angular/angular.js"></script>
+      <script src="/assets/bower_components/angular-route/angular-route.js"></script>
+      <script src="/assets/app/app.js"></script>
+      <script src="/assets/app/album-list/album-list.component.js"></script>
+      <script src="/assets/app/album-detail/album-detail.component.js"></script>
+
+      <script src="/assets/bower_components/jquery/jquery.min.js"></script>
+      <script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 </html>
